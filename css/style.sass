@@ -1,0 +1,52 @@
+@import helpers
+
+/*---- Typography */
+h1
+    font-size: 62px
+    font-weight: bold
+    margin: 0 0 40px 0
+
+/*---- Main */
+article
+    padding: 40px 0
+
+section
+    width: 100%
+
+#accordion
+    padding: 20px 0
+    .accordion__row
+        border: 1px solid #eaeaea
+        margin: 0 0 15px 0
+        +transition(all 0.2s ease-out)
+        +border-radius(5px)
+        &:hover
+            +box-shadow(0 5px 10px 0 rgba(0,0,0,0.05))
+            .accordion__trigger
+                color: #C91F37 !important
+        .accordion__trigger
+            display: flex
+            justify-content: space-between
+            align-items: center
+            text-decoration: none
+            padding: 15px
+            font-weight: bold
+            font-size: 20px
+            color: #000
+            +transition(all 0.2s ease-out)
+            &:after
+                font-family: "Font Awesome 5 Free"
+                content: "\f078"
+        .accordion__content
+            padding: 0 15px 20px 15px
+            display: none
+            p:last-child
+                margin: 0
+            ul:last-child
+                margin: 0
+    .accordion--open
+        +box-shadow(0 5px 10px 0 rgba(0,0,0,0.05))
+        .accordion__trigger
+            color: #C91F37 !important
+            &:after
+                content: "\f077" !important
